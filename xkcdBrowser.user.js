@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XKCD Keybord Browser
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Use 'A' or 'J' to go back; 'D' or 'L' to go forward.
 // @author       Florin Tobler
 // @match        https://xkcd.com/*/
@@ -21,6 +21,10 @@
             navigatePage(-1);
         } else if (key == 'd' || key == 'l') {
             navigatePage(+1);
+        } else if (key == 'i') {
+            window.scrollBy(0, -100);
+        } else if (key == 'k') {
+            window.scrollBy(0, 100);
         }
     };
 
